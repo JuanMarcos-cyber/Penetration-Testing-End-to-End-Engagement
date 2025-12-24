@@ -20,9 +20,7 @@ Special emphasis is placed on:
 - Business impact  
 - Clear and structured communication  
 
-The goal is not only to find vulnerabilities,  
-but to **explain why they matter**  
-and **how they should be fixed**.
+The goal is not only to find vulnerabilities,  but to **explain why they matter**  and **how they should be fixed**.
 
 
 > ⚠️ All activities were conducted in an **authorized lab environment**  for **educational purposes only**.
