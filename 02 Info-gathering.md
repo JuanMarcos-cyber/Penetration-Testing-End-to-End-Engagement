@@ -1,3 +1,8 @@
+## Tools installed
+
+![DVWA Network Tab](screenshots/Screenshot%20Tools%20Installation.png)
+
+
 ## Discovered Services
 
 The following network services were identified on the target host:
