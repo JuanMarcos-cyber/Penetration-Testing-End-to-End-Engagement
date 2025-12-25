@@ -58,6 +58,8 @@ The following assets were identified and classified based on value and impact:
 
 ## Attack Surface Analysis
 
+![DVWA Network Tab](screenshots/attack-surface-diagram.jpg)
+
 ### External Attack Surface
 
 - HTTP service exposed on port 4280
