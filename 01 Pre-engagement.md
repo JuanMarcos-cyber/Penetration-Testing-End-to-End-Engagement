@@ -1,117 +1,123 @@
-# 01 – Pre-Engagement & Technical Readiness
+# 01 – Pre-Engagement
+====================
 
-## Objective
+## Purpose
 
-This phase establishes authorization, scope definition, technical readiness, and safety controls prior to initiating any active penetration testing activities. All conditions described in this document were verified before exploitation began.
+The purpose of this phase is to formally define the scope, authorization,
+constraints, and preparation required before initiating any penetration
+testing activities.
 
----
-
-## Technical Readiness Checklist
-
-### Environment Validation
-
-- DVWA application reachable on port 4280
-- Database initialized successfully
-- Security level configured to **Low**
-- Valid application credentials confirmed
-
-### Tooling Readiness
-
-- Firefox browser available
-- Docker service running
-- Terminal access confirmed
-- curl available for HTTP inspection
+A well-executed pre-engagement phase ensures that testing is **authorized,
+controlled, ethical, and reproducible**, and prevents scope creep or accidental
+impact on unintended systems.
 
 ---
 
-## Evidence and Reporting Preparation
+## Engagement Overview
 
-To ensure consistent documentation and full traceability throughout the engagement, a standardized evidence and reporting structure was defined before exploitation activities commenced.
+- **Organization:** Internal Training Lab  
+- **Assessment Type:** Web Application Penetration Test  
+- **Target Application:** DVWA (Damn Vulnerable Web Application)  
+- **Target URL:** http://localhost:4280  
+- **Environment:** Localhost / Docker-based Linux container  
+- **Tester:** Juan Marcos Lázaro Rey  
+- **Engagement Date:** December 11th, 2025  
+- **Engagement Duration:** 1 hour (active testing window)
+
+This assessment was conducted exclusively for **educational and training
+purposes** in a controlled lab environment.
 
 ---
 
-## Reporting Structure
+## Scope Definition
 
-```text
-reports/
-├── executive-summary.md
-├── findings/
-├── remediation-plan.md
-├── lessons-learned.md
-└── screenshots/
+### In-Scope Assets
+
+The following assets were explicitly authorized for testing:
+
+- DVWA web application running on `127.0.0.1:4280`
+- Application-layer vulnerabilities only
+- Web interfaces and application logic
+- Authentication and session management mechanisms
+
+---
+
+### Out-of-Scope Assets
+
+The following systems and activities were explicitly excluded from testing:
+
+- Host operating system
+- Docker host and container escape attempts
+- Network infrastructure
+- Physical security
+- Social engineering
+- Denial-of-service (DoS) attacks
+- Privilege escalation beyond application scope
+
+Testing outside this scope was **strictly prohibited**.
+
+---
+
+## Rules of Engagement (RoE)
+
+### Authorization
+
+- Testing was pre-authorized by the lab environment owner.
+- Legal framework: **Educational use only**
+- No real or sensitive data was involved.
+- All actions were confined to intentionally vulnerable systems.
+
+---
+
+### Permitted Activities
+
+- Web application vulnerability scanning
+- Manual penetration testing
+- SQL injection testing
+- Cross-site scripting (XSS) proof-of-concepts
+- Authentication and session management testing
+- File upload and file inclusion testing
+
+---
+
+### Prohibited Activities
+
+- Host system exploitation
+- Docker container escape attempts
+- Network-level attacks
+- High-volume automated scanning
+- Data destruction or modification
+- Service disruption
+
+Any deviation required **explicit instructor approval**.
+
+---
+
+## Testing Methodology
+
+The engagement followed an industry-aligned methodology, including:
+
+- OWASP Testing Guide v4.0
+- Manual validation of identified vulnerabilities
+- Controlled exploitation with proof-of-concept only
+- Evidence-based documentation
+
+Testing was intentionally **manual-first** to reflect realistic attacker
+behavior rather than automated exploitation.
+
+---
+
+## Communication and Escalation
+
+- **Primary Contact:** Lab Instructor  
+- **Reporting Schedule:** Upon completion of testing  
+- **Critical Findings:** Immediate notification and testing halt  
+- **Unexpected Behavior:** Stop testing and consult instructor  
+
+### Emergency Stop Procedure
+
+```bash
+docker compose down
 ```
 
-## Component Purpose
-
-### executive-summary.md
-
-Provides a high-level overview of the engagement for non-technical stakeholders, focusing on business impact, overall risk posture, and key recommendations.
-
-### findings/
-
-Contains detailed vulnerability write-ups, including technical descriptions, exploitation steps, screenshots, and impact analysis.
-
-### remediation-plan.md
-
-Defines a prioritized remediation roadmap with recommended corrective actions and security best practices.
-
-### lessons-learned.md
-
-Documents post-engagement reflections, defensive insights, and improvement opportunities identified during testing.
-
-### screenshots/
-
-Stores visual evidence captured during exploitation, referenced directly from the corresponding findings.
-
----
-
-## Benefits of This Structure
-
-- Clear separation between executive and technical documentation
-- Evidence captured during exploitation rather than retroactively
-- Direct traceability from vulnerability discovery to remediation
-- Professional reporting format aligned with real-world penetration testing deliverables
-
----
-
-## Risk Management and Safety Controls
-
-To prevent unintended impact during testing, the following safeguards were defined and enforced throughout the engagement:
-
-- Emergency stop procedures established
-- No destructive payloads permitted
-- Request rates intentionally kept low
-- Testing confined strictly to the DVWA environment
-- Instructor designated as escalation contact
-
----
-
-## Engagement Authorization
-
-All pre-engagement conditions were reviewed and approved prior to initiating testing activities.
-
-### Tester
-
-- Juan Marcos Lázaro Rey
-
-### Environment
-
-- Authorized internal training lab
-- Educational and non-production use only
-
-### Authorization Status
-
-- Approved to proceed to Information Gathering and Reconnaissance
-
----
-
-## Next Phase
-
-### 02 – Information Gathering and Reconnaissance
-
-The next phase focuses on:
-
-- Application mapping
-- Endpoint discovery
-- Header and technology analysis
-- Passive and active reconnaissance
+![Docker environment initialized using docker compose up](screenshots/Screenshot%20Docker%20compose%20up.png)
