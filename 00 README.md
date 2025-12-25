@@ -84,6 +84,10 @@ Phases 04 through 07.
 - Authentication brute-force testing (Hydra)
 - Network discovery and port scanning (Nmap)
 - Local network and service inspection (netstat)
+- WHOIS lookup (whois)
+- DNS enumeration and resolution testing (dig)
+- HTTP request testing and validation (curl)
+- Web technology fingerprinting (WhatWeb)
 - Custom payload crafting
 - Log analysis and forensic timeline reconstruction
 - CVSS v3.1 risk scoring
