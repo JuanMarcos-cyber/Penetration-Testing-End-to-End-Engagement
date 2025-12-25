@@ -151,17 +151,23 @@ These observations confirm the feasibility of multiple attack vectors.
 - Impact: Session hijacking, client-side attacks
 - STRIDE: Tampering, Information Disclosure
 
+![DVWA XSS](screenshots/Screenshot%20DVWA%20XSS%20stored.png)
+
 ### Local File Inclusion (LFI)
 - Entry Point: File include parameters
 - Preconditions: Path traversal allowed
 - Impact: File disclosure, source code exposure
 - STRIDE: Information Disclosure, Elevation of Privilege
 
+![DVWA LFI](screenshots/Screenshot%20LFI%201.png)
+
 ### Command Injection
 - Entry Point: OS command execution module
 - Preconditions: Unsanitized command input
 - Impact: Arbitrary command execution
 - STRIDE: Tampering, Elevation of Privilege
+
+![DVWA Command Injection](screenshots/Screenshot%20CommandInjectionAdvanced.png)
 
 ---
 
