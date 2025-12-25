@@ -67,6 +67,8 @@ potential impact if compromised.
 
 ## Attack Surface Analysis
 
+![DVWA Network Tab](screenshots/attack-surface-diagram.jpg)
+
 ### External Attack Surface
 
 The primary external attack surface is the HTTP service exposed by DVWA.
