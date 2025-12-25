@@ -1,128 +1,122 @@
-# Penetration-Testing-End-to-End-Engagement
+# Penetration Testing Lab – End-to-End Assessment
 
-## Overview
+This repository documents a complete end-to-end penetration testing exercise,
+covering all phases from pre-engagement to final risk reporting.
 
-This repository documents a **full end-to-end penetration testing engagement**
-performed in a **controlled laboratory environment** using the
-**Damn Vulnerable Web Application (DVWA)**.
-
-The project follows a **real-world penetration testing lifecycle**,
-from initial authorization and reconnaissance through exploitation,
-post-exploitation, and final reporting.
-
-The objective is not only to identify vulnerabilities,
-but to clearly explain **why they matter**, **their potential impact**,
-and **how they should be remediated**.
+The objective of this project is to demonstrate practical penetration testing
+skills, structured methodology, evidence-based reporting, and risk-focused
+communication aligned with industry standards.
 
 ---
 
-## Engagement Phases
+## Scope and Objectives
 
-The assessment is structured into **seven distinct phases**,
-each documented separately to reflect professional penetration testing practices.
+The assessment simulates a real-world web application penetration test with
+the following objectives:
 
-### 01 – Pre-Engagement & Authorization
-
-Definition of scope, rules of engagement, technical readiness,
-and safety controls before any active testing begins.
-
-Focus:
-- Authorization
-- Scope definition
-- Risk management
-- Evidence and reporting preparation
+- Identify and validate security vulnerabilities
+- Demonstrate exploitation and post-exploitation impact
+- Assess systemic security weaknesses
+- Communicate risk using CVSS v3.1
+- Provide actionable remediation guidance
 
 ---
 
-### 02 – Information Gathering & Reconnaissance
+## Repository Structure
 
-Discovery and mapping of the target application without exploitation.
+```text
+.
+├── screenshots/
+├── 00_README.md
+├── 01_Pre-engagement.md
+├── 02_Info-gathering.md
+├── 03_Threat_modelling.md
+├── 04_Vulnerability_assessment.md
+├── 05_Exploitation.md
+├── 06_Post-exploitation.md
+└── 07_Reporting.md
+```
 
-Focus:
-- Application mapping
-- Endpoint and directory discovery
-- Technology and header analysis
+
+
+Each phase builds on the previous one and reflects a standard professional
+penetration testing workflow.
+
+---
+
+## Methodology
+
+The assessment follows an industry-aligned penetration testing methodology,
+including:
+
+- Pre-engagement and scope definition
 - Passive and active reconnaissance
+- Threat modeling and attack surface analysis
+- Vulnerability identification and validation
+- Manual exploitation and attack chaining
+- Post-exploitation analysis
+- Risk scoring using CVSS v3.1
+- Remediation and lessons learned
 
 ---
 
-### 03 – Threat Modeling
+## Key Findings Overview
 
-Analysis of the identified attack surface to understand
-potential attack paths and high-risk areas.
+The assessment identified multiple high and critical vulnerabilities affecting:
 
-Focus:
-- Attack surface analysis
-- Trust boundaries
-- Threat identification
-- Potential attacker objectives
+- Input validation
+- Authentication and session management
+- File handling and access control
 
----
+A particular focus is placed on **weak session identifiers**, which represent
+a systemic authentication failure and significantly amplify overall risk.
 
-### 04 – Vulnerability Assessment
-
-Identification and validation of vulnerabilities present
-in the application without full impact exploitation.
-
-Focus:
-- Vulnerability identification
-- Severity assessment
-- Risk evaluation
-- Evidence collection
+Detailed findings, exploitation evidence, and CVSS vectors are documented in
+Phases 04 through 07.
 
 ---
 
-### 05 – Exploitation
+## Tools and Techniques
 
-Controlled exploitation of identified vulnerabilities
-to demonstrate real-world impact.
+- Manual testing (Burp Suite Community Edition)
+- Directory enumeration (DIRB)
+- Web server vulnerability scanning (Nikto)
+- Authentication brute-force testing (Hydra)
+- Network discovery and port scanning (Nmap)
+- Local network and service inspection (netstat)
+- Custom payload crafting
+- Log analysis and forensic timeline reconstruction
+- CVSS v3.1 risk scoring
 
-Focus:
-- Proof-of-concept exploitation
-- Payload execution
-- Data exposure validation
-- Command execution where applicable
-
----
-
-### 06 – Post-Exploitation
-
-Analysis of what an attacker could achieve after initial access.
-
-Focus:
-- Privilege context
-- Data access and disclosure
-- Attack chaining
-- Potential lateral movement (within scope)
+No fully automated exploitation frameworks were relied upon, reflecting a
+realistic attacker workflow.
 
 ---
 
-### 07 – Reporting & Remediation
+## Reporting and Risk Communication
 
-Clear communication of findings and actionable remediation guidance.
+Phase 07 consolidates all findings into a risk-focused report suitable for
+decision-makers, emphasizing:
 
-Focus:
-- Executive summary
-- Technical reporting
 - Business impact
-- Remediation planning
+- CVSS-based prioritization
+- Remediation strategy
 - Lessons learned
 
 ---
 
-## Key Principles
+---
 
-- Risk-based approach
-- Clear and structured communication
-- Evidence-driven findings
-- Business impact awareness
-- Professional reporting standards
+## ⚠️ Disclaimer
+
+This project was conducted in a **controlled lab environment** for **educational
+purposes only**.
+
+All testing activities were **explicitly authorized** and performed against
+**intentionally vulnerable systems** designed for security training.
+
+⚠️ **No real-world systems, networks, or user data were targeted or impacted
+during this assessment.**
 
 ---
 
-## Disclaimer
-
-⚠️ All activities documented in this repository were performed in an
-**authorized lab environment** and are intended **strictly for educational
-and training purposes**.  
-No production systems were targeted or affected.
