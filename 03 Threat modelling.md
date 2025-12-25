@@ -130,6 +130,8 @@ Review of application source code revealed:
 
 These observations confirm the feasibility of multiple attack vectors.
 
+![DVWA Network Tab](screenshots/DVWA%20Page%20Source.png)
+
 ---
 
 ## Attack Vector Analysis
@@ -139,6 +141,9 @@ These observations confirm the feasibility of multiple attack vectors.
 - Preconditions: No input validation
 - Impact: Authentication bypass, data extraction
 - STRIDE: Spoofing, Tampering
+
+![DVWA SQL Injection – Basic](screenshots/Screenshot%20DVWA%20SQLi%20basic.png)
+
 
 ### Cross-Site Scripting (XSS)
 - Entry Point: Stored and reflected input fields
