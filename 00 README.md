@@ -119,6 +119,13 @@ purposes only**.
 All testing activities were **explicitly authorized** and performed against
 **intentionally vulnerable systems** designed for security training.
 
+# 🙌 Author
+
+**Juan Marcos Lázaro**  
+Cloud Security & GRC Professional  
+Miami, FL  
+LinkedIn: https://www.linkedin.com/in/juanmarcoslazaro
+
 ⚠️ **No real-world systems, networks, or user data were targeted or impacted
 during this assessment.**
 
